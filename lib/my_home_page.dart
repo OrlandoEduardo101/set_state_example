@@ -12,7 +12,6 @@ class MyHomePage extends StatefulWidget {
   _MyHomePageState createState() => _MyHomePageState();
 }
 
-
 class _MyHomePageState extends State<MyHomePage> {
   double _height = 50;
   double _width = 50;
@@ -63,28 +62,41 @@ class _MyHomePageState extends State<MyHomePage> {
 //   MyHomeController controller = MyHomeController();
 //   @override
 //   Widget build(BuildContext context) {
+//     print("Build");
 //     return Scaffold(
 //         appBar: AppBar(
 //           title: Text(widget.title),
 //         ),
 //         body: ValueListenableBuilder(
-//           valueListenable: controller.height,
-//           builder: (context, hasError, child) {
-//             return Center(
-//                 child: AnimatedContainer(
-//               duration: Duration(milliseconds: 500),
-//               height: controller.height.value,
-//               width: controller.width.value,
-//               decoration: BoxDecoration(
-//                   color: controller.color.value, borderRadius: BorderRadius.circular(12)),
-//             ));
-//           }
-//         ),
-//         floatingActionButton: FloatingActionButton(
-//           onPressed: controller.update,
-//           tooltip: 'Action',
-//           child: Icon(Icons.update),
+//             valueListenable: controller.height,
+//             builder: (context, hasError, child) {
+//               print("ValueListenableBuilder");
+//               return Center(
+//                   child: AnimatedContainer(
+//                 duration: Duration(milliseconds: 500),
+//                 height: controller.height.value,
+//                 width: controller.width.value,
+//                 decoration: BoxDecoration(
+//                     color: controller.color.value,
+//                     borderRadius: BorderRadius.circular(12)),
+//               ));
+//             }),
+//         floatingActionButton: Column(
+//           mainAxisAlignment: MainAxisAlignment.end,
+//           children: [
+//             FloatingActionButton(
+//               onPressed: controller.update,
+//               tooltip: 'Action',
+//               child: Icon(Icons.update),
+//             ),
+//             FloatingActionButton(
+//               onPressed: () {
+//                 setState(() {});
+//               },
+//               tooltip: 'Action',
+//               child: Icon(Icons.update),
+//             ),
+//           ],
 //         ));
 //   }
 // }
-
